@@ -35,3 +35,7 @@ button:hover {
 label {
   display: block;
 }
+
+div {
+  width: 100%;
+}
