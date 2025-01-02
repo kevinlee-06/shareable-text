@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顯示訊息</title>
+    <script>
+        function getMessageFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const message = urlParams.get('message');
+            if (message) {
+                document.getElementById('messageDisplay').value = message;
+            } else {
+                document.getElementById('messageDisplay').value = '未找到訊息';
+            }
+            const title = urlParams.get('title');
+            if (title) {
+                document.getElementById('titleDisplay').innerText = title;
+            } else {
+                document.getElementById('titleDisplay').innerText = '訊息:';
+            }
+        }
+        function copyText() {
+            var copyText = document.getElementById("messageDisplay");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            alert("已複製訊息: " + copyText.value);
+        }
+    </script>
+</head>
+<body onload="getMessageFromUrl()">
+    <p id="titleDisplay">訊息</p>
+    <input type="text" id="messageDisplay"/>
+    <button onClick="copyText()">複製</button>
+</body>
+</html>
