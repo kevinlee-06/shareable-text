@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>顯示訊息</title>
+  <link rel="stylesheet" href="styles.css">
   <script>
     function getMessageFromUrl() {
         const urlParams = new URLSearchParams(window.location.search);
@@ -30,8 +31,10 @@
   </script>
 </head>
 <body onload="getMessageFromUrl()">
-  <p id="titleDisplay">訊息</p>
-  <input type="text" id="messageDisplay"/>
-  <button onClick="copyText()">複製</button>
+  <div class="container">
+    <p id="titleDisplay">訊息</p>
+    <input type="text" id="messageDisplay"/>
+    <button onClick="copyText()">複製</button>
+  </div>
 </body>
 </html>
