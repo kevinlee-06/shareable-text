@@ -24,7 +24,7 @@ button {
   padding: 10px 15px; /* Padding inside the button */
   border-radius: 3px; /* Slightly rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
-  margin-top: 10px; /* Margin above the button */
+  margin: 0 10px; /* Margin above the button */
   width: 100%;
 }
 
