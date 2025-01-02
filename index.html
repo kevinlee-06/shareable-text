@@ -39,8 +39,9 @@
       const originalInputText = document.getElementById("inputText").value;
       const encodedInputText = encodeURIComponent(originalInputText);
       const encodedInputTitle = encodeURIComponent(originalInputTitle);
-      const {protocol, hostname, port} = window.location
-      document.getElementById("outputText").value = `${protocol}//${hostname}:${port}/share.html?message=${encodedInputText}&title=${encodedInputTitle}`;
+      const {protocol, hostname} = window.location
+      const port = window.location.port ? ":" + window.location.port : "";
+      document.getElementById("outputText").value = `${protocol}//${hostname}${port}/share.html?message=${encodedInputText}&title=${encodedInputTitle}`;
     }
 
     function copyText() {
