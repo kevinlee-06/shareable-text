@@ -8,7 +8,7 @@
 }
 
 input[type="text"] {
-  width: 100%;
+  width: 90%;
   padding: 10px; /* Padding inside the input */
   margin: 10px 0; /* Margin between inputs */
   border: 1px solid #444; /* Dark border */
@@ -34,8 +34,4 @@ button:hover {
 
 label {
   display: block;
-}
-
-div {
-  width: 100%;
 }
