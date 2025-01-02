@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>產生網址</title>
+</head>
+<body>
+  <input type="text"id=inputTitle>
+  <input type="text"id=inputText>
+  <button onclick="encodeString()">Generate</button>
+  <input type="text"id=outputText>
+  <button onClick="copyText()">複製</button>
+
+  <script>
+    function encodeString() {
+      const originalInputTitle = document.getElementById("inputTitle").value;
+      const originalInputText = document.getElementById("inputText").value;
+      const encodedInputText = encodeURIComponent(originalInputText);
+      const encodedInputTitle = encodeURIComponent(originalInputTitle);
+      const {protocol, hostname, port} = window.location
+      document.getElementById("outputText").value = `${protocol}//${hostname}:${port}/share.html?message=${encodedInputText}&title=${encodedInputTitle}`;
+    }
+
+    function copyText() {
+        var copyText = document.getElementById("outputText");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        alert("已複製訊息: " + copyText.value);
+    }
+      </script>
+</body>
+</html>
