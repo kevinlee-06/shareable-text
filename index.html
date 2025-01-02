@@ -8,28 +8,20 @@
 </head>
 <body>
   <div class="container">
-    <div>
-      <div>
-        <label for="inputTitle">標題</label>
-        <input type="text"id=inputTitle>
-      </div>
-      <div>
-        <label for="inputText">內容</label>
-        <input type="text"id=inputText>
-      </div>
-      <button onclick="encodeString()">產生網址</button>
-    </div>
+    <label for="inputTitle">標題</label>
+    <input type="text" id="inputTitle">
     
-    <div>
-      <div>
-        <label for="outputText">網址</label>
-        <input type="text"id=outputText>
-      </div>
-      <div>
-        <button onClick="copyText()">複製</button>
-      </div>
-    </div>
+    <label for="inputText">內容</label>
+    <input type="text" id="inputText">
+    
+    <button onclick="encodeString()">產生網址</button>
+    
+    <label for="outputText">網址</label>
+    <input type="text" id="outputText">
+    
+    <button onClick="copyText()">複製</button>
   </div>
+    
     
   <script>
     function encodeString() {
