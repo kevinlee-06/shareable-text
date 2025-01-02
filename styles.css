@@ -60,3 +60,16 @@ button {
 button:hover {
   background-color: #c2185b; /* Darker pink on hover */
 }
+
+a {
+  display: inline-block;
+  margin-top: 20px; /* Space above the link */
+  text-decoration: none; /* Remove underline */
+  color: #d81b60; /* Pink color for the link */
+  font-weight: bold; /* Bold text */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+a:hover {
+  color: #c2185b; /* Darker pink on hover */
+}
