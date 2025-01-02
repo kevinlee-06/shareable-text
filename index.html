@@ -48,13 +48,19 @@
       document.getElementById("outputText").value = `${protocol}//${hostname}${port}/share.html?message=${encodedInputText}&title=${encodedInputTitle}`;
     }
 
+    function isMobileDevice() {
+      return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    }
+
     function copyText() {
         var copyText = document.getElementById("outputText");
         copyText.select();
         copyText.setSelectionRange(0, 99999);
         document.execCommand("copy");
-        alert("已複製訊息: " + copyText.value);
+        if(!isMobileDevice) {
+          alert("已複製訊息: " + copyText.value);
+        }
     }
-      </script>
+  </script>
 </body>
 </html>
