@@ -4,14 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>產生網址</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <input type="text"id=inputTitle>
-  <input type="text"id=inputText>
-  <button onclick="encodeString()">Generate</button>
-  <input type="text"id=outputText>
-  <button onClick="copyText()">複製</button>
-
+  <div class="container">
+    <div>
+      <div>
+        <label for="inputTitle">標題</label>
+        <input type="text"id=inputTitle>
+      </div>
+      <div>
+        <label for="inputText">內容</label>
+        <input type="text"id=inputText>
+      </div>
+      <button onclick="encodeString()">產生網址</button>
+    </div>
+    
+    <div>
+      <div>
+        <label for="outputText">網址</label>
+        <input type="text"id=outputText>
+      </div>
+      <div>
+        <button onClick="copyText()">複製</button>
+      </div>
+    </div>
+  </div>
+    
   <script>
     function encodeString() {
       const originalInputTitle = document.getElementById("inputTitle").value;
